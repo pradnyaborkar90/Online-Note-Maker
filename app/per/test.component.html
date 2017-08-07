@@ -1,0 +1,16 @@
+  <form class="containers"
+  [formGroup]="form1"
+    (ngSubmit)="onSubmit(form1.value)">
+  <input type="text" name="url" placeholder=" "formControlName="url">
+  <br>
+<input type="text" name="describe"  placeholder=" "formControlName="describe">
+<br>
+<input type="submit" value="submit">
+</form>
+  <div id="details-container">
+    <div *ngIf="(user | async)?.uid">
+      <p *ngFor="let user of items | async"><img src="../assets/images/pin.jpg" height="10" width="10">
+<button (click)="delete(user)">X</button><br>{{user.user.url}}<br>{{user.user.describe}}</p>
+     
+    </div>
+  </div>

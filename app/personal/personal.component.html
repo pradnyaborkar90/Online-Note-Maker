@@ -1,0 +1,19 @@
+ 
+ 
+ 
+
+
+
+<div >
+    <button> Create new</button>
+<div class="details-container" *ngIf="(user|async)?.uid">
+    <p *ngFor="let user of item|async"><img src="../assets/images/pin.jpg" height="10" width="10">
+<button (click)="delete(user)">X</button><br>{{user.user.url}}<br>{{user.user.describe}}
+<routerlink="\test" *ngIf="(user|async)?.uid" delete(user)><span> edit</span>
+<router-outlet></router-outlet>
+</p>  
+     </div>
+
+
+
+ 

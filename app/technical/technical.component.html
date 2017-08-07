@@ -1,0 +1,17 @@
+
+<div id="details-container">
+    <div *ngIf="(user | async)?.uid">
+
+      <a routerLink="/universal" *ngIf="(user | async)?.uid"><button >CreateNew</button></a>
+<router-outlet></router-outlet>
+      <p *ngFor="let user of items | async"><img src="../assets/images/pin.jpg" height="10" width="10">
+<span (click)="delete(user)">delete</span><br>{{user.user.url}}<br>{{user.user.describe}}
+ <a routerLink="/universal" ><span (click)="delete(user)" >edit</span></a>
+<router-outlet></router-outlet>
+
+
+    </p>
+     
+    </div>
+    </div>
+

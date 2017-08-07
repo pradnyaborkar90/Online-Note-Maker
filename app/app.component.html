@@ -1,0 +1,52 @@
+
+<div class="page">
+
+  <button (click)="googleLogin()" *ngIf="!(user | async)?.uid"> SignUp with google</button>
+  
+  <a routerLink="/signup" *ngIf="!(user | async)?.uid"><button > Signup</button></a>
+<router-outlet></router-outlet>
+  <div class="login">
+  <input type="email"  placeholder="email" *ngIf="!(user | async)?.uid" required size="50"[(ngModel)]="email" >
+    <input type="password"  placeholder="password" [(ngModel)]="password"*ngIf="!(user | async)?.uid"required>
+ <button (click)="login1(email,password)" *ngIf="!(user | async)?.uid"> Login</button>
+ </div>
+<a routerLink="/menu" *ngIf="(user | async)?.uid"><button > Create Folder to store your data</button></a>
+<router-outlet></router-outlet>
+  <button (click)="logout()" *ngIf="(user | async)?.uid">Logout</button>
+<br>
+</div>
+
+
+
+ 
+  <!--<div class="card" *ngIf="(user | async)?.uid">
+    <div class="image" *ngIf="(user | async)?.uid">
+ <img src="../assets/images/engineering-clipart-md.png" alt="Avatar" width="100" height="100" >
+ </div>
+  <div class="container"*ngIf="(user | async)?.uid">
+ <p>Architect Engineer</p> 
+  </div>
+</div>-->
+<div>
+  <a routerLink="/technical" *ngIf="(user | async)?.uid" ><button >Technical Section</button></a>
+<router-outlet></router-outlet>
+</div>
+
+<br>
+ <!-- <div class="card" *ngIf="(user | async)?.uid">
+    <div class="image" *ngIf="(user | async)?.uid">
+ <img src="../assets/images/engineering-clipart-md.png" alt="Avatar" width="100" height="100" >
+ </div>
+  <div class="container"*ngIf="(user | async)?.uid">
+ <p>Architect Engineer</p> 
+  </div>
+</div>-->
+
+ <div>
+<a routerLink="/personal" *ngIf="(user | async)?.uid"><button>Personal Section</button></a>
+<router-outlet></router-outlet>
+ </div>
+
+
+
+

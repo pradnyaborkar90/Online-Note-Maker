@@ -1,0 +1,5 @@
+
+
+<input type="text"  placeholder="email"  [(ngModel)]="emailnew" *ngIf="!(user | async)?.uid">
+    <input type="password" placeholder="password"   [(ngModel)]="passwordnew" *ngIf="!(user | async)?.uid">
+    <button (click)="signup(emailnew,passwordnew)" *ngIf="!(user | async)?.uid">SIGNUP</button>

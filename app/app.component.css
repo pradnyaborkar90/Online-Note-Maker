@@ -1,0 +1,80 @@
+
+
+img {
+    display:block;
+    margin-bottom:12px;
+}
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color:#EBEBEB;
+    padding-top: 5em;
+}
+* {
+    font-family: 'Raleway';
+}
+button {
+    background:#008FEF;
+    color:white;
+    padding: 1.2em;
+    width:300px;
+    text-align:center;
+    font-size:1.2em;
+    margin-bottom: 30px;
+    cursor:pointer;
+    margin-left: 750px;
+    position:relative;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 400px;
+    margin-left: 200px;
+    width:400px;
+    text-align: center;
+   
+    margin-top: 0px;
+    font-family: sans-serif;
+    text-align: center;
+   
+    padding: 20px 10px;
+    margin-top:10px;
+    color: white;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+    width: 200px;
+    height: 200px;
+    margin-left: 200px;
+   
+}
+#image{
+   margin-left:50px;
+}
+#bottom{
+    width: 200px;
+    height:50 px;
+    margin-top: 400px;
+    align-content: center;
+}
+#tree{
+     height: 400px;
+    margin-left: 200px;
+    width:400px;
+    text-align: center;
+   
+    margin-top: 0px;
+    font-family: sans-serif;
+    text-align: center;
+   
+    padding: 20px 10px;
+    margin-top:10px;
+    color: white;
+}
